@@ -1,0 +1,18 @@
+{
+    "scan": {
+        "default_start_port": 1,
+        "default_end_port": 1024,
+        "default_workers": 100,
+        "default_timeout": 1.0,
+        "deep_scan_enabled": false,
+        "ssl_check_enabled": false
+    },
+    "output": {
+        "default_format": "json",
+        "log_level": "INFO"
+    },
+    "gui": {
+        "window_size": "800x600",
+        "theme": "default"
+    }
+}

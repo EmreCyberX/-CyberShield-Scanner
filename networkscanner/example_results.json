@@ -1,0 +1,58 @@
+{
+    "target": "test-domain.net",
+    "target_ip": "10.10.10.50",
+    "scan_start": "2025-10-28T12:00:00.123456",
+    "scan_end": "2025-10-28T12:00:10.123456",
+    "duration": 10.0,
+    "scan_type": "deep",
+    "open_ports": [
+        {
+            "port": 80,
+            "state": "open",
+            "service": "http",
+            "version": "Apache/2.4.52",
+            "banner": "Apache/2.4.52 (Ubuntu)",
+            "response_time": 0.125,
+            "vulnerabilities": []
+        },
+        {
+            "port": 443,
+            "state": "open",
+            "service": "https",
+            "version": "nginx/1.18.0",
+            "banner": "nginx/1.18.0",
+            "response_time": 0.138,
+            "ssl": {
+                "issuer": {
+                    "commonName": "DigiCert TLS RSA CA",
+                    "organizationName": "DigiCert Inc",
+                    "countryName": "US"
+                },
+                "subject": {
+                    "commonName": "test-domain.net",
+                    "organizationName": "Example Inc."
+                },
+                "version": 3,
+                "serialNumber": "1234567890",
+                "notBefore": "2025-01-01T00:00:00Z",
+                "notAfter": "2026-01-01T00:00:00Z"
+            }
+        },
+        {
+            "port": 21,
+            "state": "open",
+            "service": "ftp",
+            "version": "vsftpd 3.0.3",
+            "banner": "220 FTP server ready",
+            "response_time": 0.145,
+            "vulnerabilities": [
+                {
+                    "type": "default_credentials",
+                    "severity": "high",
+                    "description": "Anonymous FTP login allowed",
+                    "recommendation": "Disable anonymous FTP access if not required"
+                }
+            ]
+        }
+    ]
+}
